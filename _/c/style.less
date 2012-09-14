@@ -1,0 +1,663 @@
+/* Foundation v2.1.4 http://foundation.zurb.com */
+/* Artfully Masterminded by ZURB */
+/* -------------------------------------------------- 
+    Table of Contents
+-----------------------------------------------------
+:: Reset & Standards
+:: Links
+:: Lists
+:: Tables
+:: Misc
+*/
+/* Variables
+-------------------------------------------------- */
+
+// Links
+@linkColor:         #2a85e8;
+@linkColorHover:    #11639d;
+@linkColorFocus: 	cc4714;
+
+// Grays
+@white:             #fff;
+@grayLighter:       #ccc;
+@grayLight:         #777;
+@gray:              #555;
+@grayDark:          #333;
+@black:             #000;
+
+// Buttons Colors
+@bPrimary: 			#575757;
+@bSecondary: 		#E91C21;
+@bWhite: 			#E9E9E9;
+@bBlack: 			#141414;
+
+// Accent Colors
+@blue:              #08b5fb;
+@green:             #46a546;
+@red:               #9d261d;
+@yellow:            #ffc40d;
+@orange:            #f89406;
+@pink:              #c3325f;
+@purple:            #7a43b6;
+
+// Baseline grid
+@baseline:          20px;
+
+// Griditude
+@gridColumns:       16;
+@gridColumnWidth:   40px;
+@gridGutterWidth:   20px;
+@siteWidth:         (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
+
+
+
+
+
+
+
+
+
+/*    --------------------------------------------------
+    :: Global Reset & Standards
+    -------------------------------------------------- */
+/* 
+        Eric Meyer's CSS Reset
+        http://meyerweb.com/eric/tools/css/reset/ 
+        v2.0 | 20110126
+           License: none (public domain)
+    */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video { margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline; }
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section { display: block }
+body { line-height: 1 }
+ol,
+ul { list-style: none }
+blockquote,
+q { quotes: none }
+blockquote:before,
+blockquote:after,
+q:before,
+q:after { content: '';
+    content: none; }
+table { border-collapse: collapse;
+    border-spacing: 0; }
+body { background: #fff;
+    font-family: Georgia, serif;
+    font-size: 1em;
+    line-height: 1.38em;
+    color: #222;
+    position: relative;
+    -webkit-font-smoothing: antialiased; }
+/*    --------------------------------------------------
+    :: Links
+    -------------------------------------------------- */
+a { color: @linkColor;
+    text-decoration: none;
+    line-height: inherit; }
+a:hover { color: @linkColorHover }
+a:focus { color: @linkColorFocus;
+    outline: none; }
+p a,
+p a:visited { line-height: inherit }
+/*    --------------------------------------------------
+    :: Lists
+    -------------------------------------------------- */
+ul,
+ol { margin-bottom: 1.38em }
+ul { list-style: none outside }
+ol { list-style: decimal }
+ol,
+ul.square,
+ul.circle,
+ul.disc { margin-left: 30px }
+ul.square { list-style: square outside }
+ul.circle { list-style: circle outside }
+ul.disc { list-style: disc outside }
+li { margin-bottom: 0.93em }
+ul.large li { line-height: 1.6em }
+@media only screen and (min-width: 767px) {
+
+nav.fixed ul{
+position: fixed;
+top: 0;
+}
+}
+/* -------------------------------------------------- 
+    :: Misc
+---------------------------------------------------*/
+.left { float: left }
+.right { float: right }
+.hide { display: none }
+.highlight { background: #ff0 }
+/* Arfully Masterminded by ZURB */
+/*    --------------------------------------------------
+    :: Typography
+    -------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { color: #181818;
+    font-family: "jubilat", Museo, serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.25; }
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a { font-weight: inherit }
+h1 { font-size: 3.5em;
+    margin-bottom: 0.35em;
+    font-weight: 700;
+    font-style: italic; }
+h2 { font-size: 2.5em;
+    margin-bottom: 0.7em;
+    font-weight: 700;
+    font-style: italic; }
+h3 { font-size: 2.15em;
+     }
+h4 { font-size: 1.61em;
+    margin-bottom: 0.23em; }
+h5 { font-size: 1.38em;
+    font-weight: normal;
+    margin-bottom: 0.75em; }
+h6 { font-size: 1.15em;
+    font-weight: normal; }
+.subheader { color: #777;
+    font-weight: 300;
+    margin-bottom: 1.85em; }
+p { font-family: "ff-tisa-web-pro",serif;
+    line-height: 1.4em;
+    margin: 0 0 1.38em; }
+p img { margin: 0 }
+p.lead { font-size: 1.15em;
+    line-height: 1.25em;
+    font-family: "jubilat", Museo, serif;
+    font-weight: 200;
+    font-style: italic;
+    margin-bottom: 0; }
+em,
+i { font-style: italic;
+    line-height: inherit; }
+strong,
+b { font-weight: bold;
+    line-height: inherit; }
+small { font-size: 60%;
+    line-height: inherit; }
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small { color: #777 }
+/*    Blockquotes  */
+blockquote,
+blockquote p { line-height: 1.53em;
+    color: #777; }
+blockquote { margin: 0 0 1.38em;
+    padding: 0.7em 20px 0 19px;
+    border-left: 1px solid #ddd; }
+blockquote cite { display: block;
+    font-size: 0.92em;
+    color: #555; }
+blockquote cite:before { content: "\2014 \0020" }
+blockquote cite a,
+blockquote cite a:visited { color: #555 }
+hr { border: solid #ddd;
+    border-width: 1px 0 0;
+    clear: both;
+    margin: 0.92em 0 0.38em;
+    height: 0; }
+abbr,
+acronym { text-transform: uppercase;
+    font-size: 90%;
+    color: #222;
+    border-bottom: 1px solid #ddd;
+    cursor: help; }
+abbr { text-transform: none }
+@media print {  * {     background: transparent !important;
+        color: black !important;
+        text-shadow: none !important;
+        filter: none !important;
+        -ms-filter: none !important;
+    }
+    /* Black prints faster: sanbeiji.com/archives/953 */
+    p a,
+    p a:visited {     color: #444 !important;
+        text-decoration: underline;
+    }
+    p a[href]:after {     content: " (" attr(href) ")"
+    }
+    abbr[title]:after {     content: " (" attr(title) ")"
+    }
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {     content: ""
+    }
+    /* Don't show links for images, or javascript/internal links */
+    pre,
+    blockquote {     border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    thead {     display: table-header-group
+    }
+    /* css-discuss.incutio.com/wiki/Printing_Tables */
+    tr,
+    img {     page-break-inside: avoid
+    } }
+/* Arfully Masterminded by ZURB */
+/* --------------------------------------------------
+    :: Grid
+    
+    This is the mobile-friendly, responsive grid that
+    lets Foundation work much of its magic.
+    
+    -------------------------------------------------- */
+
+@media only screen and (min-width: 767px) { w { width: 100%;
+    margin: 0 auto; }
+.column,
+.columns { margin-left: 4.4%;
+    float: left;
+    min-height: 1px;
+    position: relative; }
+.column:first-child,
+.columns:first-child { margin-left: 0 }
+.row .one.columns { width: 4.3% }
+.row .two.columns { width: 13% }
+.row .three.columns { width: 21.68% }
+.row .four.columns { width: 30.37% }
+.row .five.columns { width: 39.1% }
+.row .six.columns { width: 47.8% }
+.row .seven.columns { width: 56.5% }
+.row .eight.columns { width: 65.2% }
+.row .nine.columns { width: 73.9% }
+.row .ten.columns { width: 82.6% }
+.row .eleven.columns { width: 91.3% }
+.row .twelve.columns { width: 100% }
+.row .offset-by-one { margin-left: 13.1% }
+.row .offset-by-two { margin-left: 21.8% }
+.row .offset-by-three { margin-left: 30.5% }
+.row .offset-by-four { margin-left: 39.2% }
+.row .offset-by-five { margin-left: 47.9% }
+.row .offset-by-six { margin-left: 56.6% }
+.row .offset-by-seven { margin-left: 65.3% }
+.row .offset-by-eight { margin-left: 74.0% }
+.row .offset-by-nine { margin-left: 82.7% }
+.row .offset-by-ten { margin-left: 91.4% }
+.row .centered { float: none; margin: 0 auto; }
+.row .offset-by-one:first-child { margin-left: 8.7% }
+.row .offset-by-two:first-child { margin-left: 17.4% }
+.row .offset-by-three:first-child { margin-left: 26.1% }
+.row .offset-by-four:first-child { margin-left: 34.8% }
+.row .offset-by-five:first-child { margin-left: 43.5% }
+.row .offset-by-six:first-child { margin-left: 52.2% }
+.row .offset-by-seven:first-child { margin-left: 60.9% }
+.row .offset-by-eight:first-child { margin-left: 69.6% }
+.row .offset-by-nine:first-child { margin-left: 78.3% }
+.row .offset-by-ten:first-child { margin-left: 87% }
+.row .offset-by-eleven:first-child { margin-left: 95.7% }
+/* Source Ordering */
+.push-two { left: 17.4% }
+.push-three { left: 26.1% }
+.push-four { left: 34.8% }
+.push-five { left: 43.5% }
+.push-six { left: 52.2% }
+.push-seven { left: 60.9% }
+.push-eight { left: 69.6% }
+.push-nine { left: 78.3% }
+.push-ten { left: 87% }
+.pull-two { right: 17.4% }
+.pull-three { right: 26.1% }
+.pull-four { right: 34.8% }
+.pull-five { right: 43.5% }
+.pull-six { right: 52.2% }
+.pull-seven { right: 60.9% }
+.pull-eight { right: 69.6% }
+.pull-nine { right: 78.3% }
+.pull-ten { right: 87% }
+img,
+object,
+embed { max-width: 100%;
+    height: auto; }
+img { -ms-interpolation-mode: bicubic }
+/* Nicolas Gallagher's micro clearfix */
+.row:before,
+.row:after,
+.clearfix:before,
+.clearfix:after { content: ""; display: table; }
+.row:after,
+.clearfix:after { clear: both }
+.row,
+.clearfix { zoom: 1 }
+/*    --------------------------------------------------
+    :: Block grids
+    
+    These are 2-up, 3-up, 4-up and 5-up ULs, suited
+    for repeating blocks of content. Add 'mobile' to
+    them to switch them just like the layout grid
+    (one item per line) on phones
+    
+    For IE7/8 compatibility block-grid items need to be
+    the same height. You can optionally uncomment the
+    lines below to support arbitrary height, but know
+    that IE7/8 do not support :nth-child.
+    -------------------------------------------------- */
+.block-grid { display: block; overflow: hidden; }
+.block-grid>li { display: block; height: auto; float: left; }
+.block-grid.two-up { margin-left: -4% }
+.block-grid.two-up>li { margin-left: 4%; width: 46%; }
+/*     .block-grid.two-up>li:nth-child(2n+1) { : left } _NO__DOTCOMMA__AFTER__*/
+.block-grid.three-up { margin-left: -2% }
+.block-grid.three-up>li { margin-left: 2%; width: 31.3%; }
+/*     .block-grid.three-up>li:nth-child(3n+1) { : left } _NO__DOTCOMMA__AFTER__*/
+.block-grid.four-up { margin-left: -2% }
+.block-grid.four-up>li { margin-left: 2%; width: 23%; }
+/*     .block-grid.four-up>li:nth-child(4n+1) { : left } _NO__DOTCOMMA__AFTER__*/
+.block-grid.five-up { margin-left: -1.5% }
+.block-grid.five-up>li { margin-left: 1.5%; width: 18.5%; } 
+}
+
+/* Moving Schtuff */
+@-webkit-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(.3);
+	}
+	
+	50% {
+		opacity: 1;
+		-webkit-transform: scale(1.05);
+	}
+	
+	70% {
+		-webkit-transform: scale(.9);
+	}
+	
+	100% {
+		-webkit-transform: scale(1);
+	}
+}
+
+@-moz-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-moz-transform: scale(.3);
+	}
+	
+	50% {
+		opacity: 1;
+		-moz-transform: scale(1.05);
+	}
+	
+	70% {
+		-moz-transform: scale(.9);
+	}
+	
+	100% {
+		-moz-transform: scale(1);
+	}
+}
+
+@-o-keyframes bounceIn {
+	0% {
+		opacity: 0;
+		-o-transform: scale(.3);
+	}
+	
+	50% {
+		opacity: 1;
+		-o-transform: scale(1.05);
+	}
+	
+	70% {
+		-o-transform: scale(.9);
+	}
+	
+	100% {
+		-o-transform: scale(1);
+	}
+}
+
+@keyframes bounceIn {
+	0% {
+		opacity: 0;
+		transform: scale(.3);
+	}
+	
+	50% {
+		opacity: 1;
+		transform: scale(1.05);
+	}
+	
+	70% {
+		transform: scale(.9);
+	}
+	
+	100% {
+		transform: scale(1);
+	}
+}
+
+.circle, .animate {
+	-webkit-animation-name: bounceIn;
+	-moz-animation-name: bounceIn;
+	-o-animation-name: bounceIn;
+	animation-name: bounceIn;
+	-webkit-animation-duration: 1s;
+	   -moz-animation-duration: 1s;
+	     -o-animation-duration: 1s;
+	        animation-duration: 1s;
+}
+
+/* Blocks */
+
+h3 + ul {
+    margin-top: 0.5em;
+}
+
+body > header h2 {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+}
+header, section { padding: 1em 20px 2em; }
+@media only screen and (min-width: 767px) {
+    header {padding:2em 5em 4em;
+        h1 {margin-top: 0.75em;}
+    }
+    section { padding: 4em 5em; }
+}
+
+header { background: url(../i/honeycomb-title.png) no-repeat left 278px fixed;}
+body {background: url(../i/honeycomb-title2.png) no-repeat top right fixed;}
+
+
+hr {
+        background: rgba(0, 0, 0, 0.125);
+        height: 1px;
+        border: 0;
+        margin-bottom: 2em;
+    }
+
+#ingredients {
+    background: #ffdd34;
+    h3 {margin: 0;}
+    @media only screen and (min-width: 767px) {
+        ul {margin: 1em 0 2em;}
+    }
+}
+
+.contrast {
+    background: #ffdd34;
+}
+
+.number {
+    @media only screen and (min-width: 767px) {
+    text-align: right;
+    width: 4em;
+    display: inline-block;
+    }
+    margin-right: 2%;
+    font-family: "jubilat", serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.5em;
+}
+.number2 {
+    margin: 0 0.15em;
+    font-family: "jubilat", serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1em;
+}
+
+p.note {
+    font-size: 90%;
+    padding: 1em;
+    color: rgba(0, 0, 0, 0.65);
+    background: #f2edd4;
+    border-bottom: 3px solid #ded18e;
+    border-left: 3px solid #ded18e;
+}
+
+.countdown {
+    font-family: "jubilat", serif;
+    font-weight: 700;
+    font-size: 3em;
+    padding-top: 0.75em;
+    h3 {
+        font-size: 2.15rem;
+    }
+    p {
+        display: inline-block;
+        font-size: 1.25rem;
+        margin-left: 0.5em;
+        font-weight: normal;
+        font-family: "ff-tisa-web-pro",serif;}
+}
+#countdown-goldings, #countdown-fuggles {
+    padding-top: 0.25em;
+    font-size:2em;
+
+    p {
+        margin-left: 0;
+        margin-right: 0.5em;
+        font-size: 0.5em;
+    }
+}
+
+.btn {
+    background: #145FAA;
+    font-size: 1.25em;
+    font-family: "jubilat", serif;
+    font-weight: 700;
+    padding: 0.35em 0.75em;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    color: white;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 3px 0px darken(#145faa,15%), inset 0 -1px 0 rgba(255, 255, 255, 0.15), 0 5px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 3px 0px darken(#145faa,15%), inset 0 -1px 0 rgba(255, 255, 255, 0.15), 0 5px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 3px 0px darken(#145faa,15%), inset 0 -1px 0 rgba(255, 255, 255, 0.15), 0 5px 5px rgba(0, 0, 0, 0.25);
+
+    &:hover {
+        color:#adc7e1;
+    }
+}
