@@ -762,10 +762,10 @@ section {
   }
 }
 header {
-  background: url(../i/honeycomb-title.png) no-repeat left 278px fixed;
+  background: url(honeycomb-title.png) no-repeat left 278px fixed;
 }
 body {
-  background: url(../i/honeycomb-title2.png) no-repeat top right fixed;
+  background: url(honeycomb-title2.png) no-repeat top right fixed;
 }
 hr {
   background: rgba(0, 0, 0, 0.125);
